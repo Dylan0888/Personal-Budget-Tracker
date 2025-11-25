@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Nav from "./components/Nav";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 function App() {
@@ -21,10 +22,12 @@ function App() {
 
   return (
     <>
- 
+      <Nav />
    
   
-
+       <button onClick={toggleTheme}>
+      {theme === "light" ? <MdDarkMode/> : <MdLightMode/>}
+    </button>
     </>
   )
 }

@@ -1,4 +1,9 @@
 @import "tailwindcss";
 
-
 @custom-variant dark (&:where(.dark, .dark *));
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    --prim-color: 65 75 190;
+    --sec-color: 240 50 11;
+}
