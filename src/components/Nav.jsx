@@ -4,7 +4,7 @@ import { SiMoneygram } from "react-icons/si";
 
 const Nav = () => {
   return (
-    <nav className='bg-white dark:bg-neutral-800 h-[30%] flex justify-evenly place-items-center p-3 gap-2 shadow-lg '> 
+    <nav className='bg-white dark:bg-neutral-800  flex justify-evenly place-items-center p-3 gap-2 shadow-lg '> 
         <div>
             <Button text={"Budgetly"} method={()=> console.log("fix later")} color={"primary"}/>
         </div>

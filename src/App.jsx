@@ -2,6 +2,10 @@ import { useState } from "react"
 import Nav from "./components/Nav";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import Button from "./components/Button";
+import { FcGoogle } from "react-icons/fc";
+import { FaApple, FaMicrosoft  } from "react-icons/fa6";
+
+
 
 function App() {
   const [theme , setTheme] = useState("light");
@@ -22,12 +26,12 @@ function App() {
 
 
   return (
-    <>
+    <div className="bg-white dark:bg-neutral-800 h-screen">
       <Nav />
    
   
-      <section className="flex flex-col h-120 border">
-          <div className="bg-[rgb(var(--prim-color))] flex p-4 gap-2">
+      <section className="flex flex-col  bg-white ">
+          <div className="bg-[rgb(var(--prim-color))]  flex p-4 gap-2 ">
             
             
             <div className="flex flex-col gap-5 w-[50%] p-4">
@@ -60,9 +64,9 @@ function App() {
             
             
             
-            <div className="flex place-content-end bg-red-500 w-[40%] translate-y-1/4 p-5 ">
+            <div className="flex place-content-end bg-red-500 w-[40%] translate-y-10 p-5 ">
 
-              <div className="flex flex-col gap-3 bg-white text-black h-full rounded-2xl p-5 w-80 shadow-lg text-neutral-700 ">
+              <div className="flex flex-col gap-8 bg-white h-full rounded-2xl p-5 w-80 shadow-lg text-neutral-700">
                 <h1 className="text-3xl font-bold text-black">Welcome back!</h1>
                 <p className="text-neutral-700">Sign in to your account to view your budget, log transactions and track progress.
                 </p>
@@ -89,37 +93,30 @@ function App() {
                   </form>
               
                 <div className="flex justify-evenly">
-                  <p>1</p>
-                  <p>2</p>
-                  <p>3</p>
+                  <div className="outline-2 p-2 outline-neutral-400/60 rounded-md text-2xl hover:outline-[rgb(var(--sec-color))] duration-100 ease-in-out cursor-pointer"><FcGoogle/></div>
+                  <div className="outline-2 p-2 outline-neutral-400/60 rounded-md text-2xl hover:outline-[rgb(var(--sec-color))] duration-100 ease-in-out cursor-pointer"><FaApple/></div>
+                  <div className="outline-2 p-2 outline-neutral-400/60 rounded-md text-2xl hover:outline-[rgb(var(--sec-color))] duration-100 ease-in-out cursor-pointer text-blue-500"><FaMicrosoft/></div>
                 </div>
               
-                <p className="text-center font-bold text-sm text-neutral-900/90">New Here ? <a href="">Create an Account</a></p>
+                <p className="text-center font-bold text-sm text-neutral-900/90">New Here ? 
+                <a href=""> Create an Account
+                  </a>
+                </p>
               
-                <p className="">By singing in you agree to our <a href="" className="text-black font-bold text-sm">Terms & Privacy</a></p>
+                <p className="">
+                  By singing in you agree to our  
+                  <a href="" className="text-black  text-sm"> Terms & Privacy
+                  </a>
+                </p>
               </div>
 
-           
-
-
-
             </div>
-
-
-
-
-
-
-
-
-
-
           </div>
           
           
           
           
-          <div className="flex justify-around h-[30%]">
+          <div className="flex justify-around h-40 ">
             
             <div>1</div>
             <div>2</div>
@@ -129,10 +126,10 @@ function App() {
       </section>
 
 
-       <button onClick={toggleTheme}>
+    <button onClick={toggleTheme}>
       {theme === "light" ? <MdDarkMode/> : <MdLightMode/>}
     </button>
-    </>
+    </div>
   )
 }
 
